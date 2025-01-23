@@ -1,0 +1,57 @@
+{
+  "name": "xhr-event-source",
+  "version": "0.0.1",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "release-it": {
+    "git": {
+      "commitMessage": "chore(release): ${version}",
+      "tagName": "v${version}"
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular",
+        "infile": "CHANGELOG.md",
+        "ignoreRecommendedBump": true
+      }
+    },
+    "github": {
+      "release": true,
+      "web": true
+    },
+    "npm": {
+      "publish": true
+    }
+  },
+  "scripts": {
+    "build": "rslib build",
+    "dev": "rslib build --watch",
+    "format": "prettier --write .",
+    "release": "pnpm build && npx release-it",
+    "clean": "rm -rf node_modules **/*/node_modules"
+  },
+  "keywords": [
+    "server-sent-events",
+    "event-source"
+  ],
+  "devDependencies": {
+    "@rslib/core": "^0.3.2",
+    "@types/node": "^22.8.1",
+    "prettier": "^3.4.1",
+    "release-it": "^18.1.1",
+    "typescript": "^5.7.3"
+  },
+  "license": "MIT"
+}
