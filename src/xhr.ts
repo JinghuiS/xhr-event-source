@@ -33,7 +33,7 @@ export function xhrEventSource(
     onclose,
     onerror,
     body,
-    method = 'POST',
+    method = 'GET',
     responseType = 'text',
     timeout = 60000,
   }: XHREventSourceInit,

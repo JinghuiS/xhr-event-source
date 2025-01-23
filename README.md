@@ -1,23 +1,18 @@
-# Rslib project
+# Xhr Event Source
 
-## Setup
-
-Install the dependencies:
+# Install
 
 ```bash
-pnpm install
+npm install --save xhr-event-source
 ```
 
-## Get started
+# Usage
+```ts
+import { xhrEventSource, type XHREventSourceInit } from 'xhr-event-source';
 
-Build the library:
-
-```bash
-pnpm build
-```
-
-Build the library in watch mode:
-
-```bash
-pnpm dev
+xhrEventSource('/api/sse', {
+  onmessage: (msg) => {
+    console.log(msg);
+  },
+});
 ```

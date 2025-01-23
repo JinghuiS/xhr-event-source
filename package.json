@@ -1,6 +1,8 @@
 {
+  "author": "Jinghui_S",
   "name": "xhr-event-source",
   "version": "0.0.1",
+  "description": "Help older browsers provide better Event Source requests",
   "type": "module",
   "exports": {
     ".": {
@@ -13,7 +15,9 @@
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "package.json",
+    "README.md"
   ],
   "release-it": {
     "git": {
@@ -34,6 +38,15 @@
     "npm": {
       "publish": true
     }
+  },
+  "homepage": "https://github.com/JinghuiS/xhr-event-source",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JinghuiS/xhr-event-source"
+  },
+  "bugs": {
+    "url": "https://github.com/JinghuiS/xhr-event-source/issues",
+    "email": "1292077619@qq.com"
   },
   "scripts": {
     "build": "rslib build",
