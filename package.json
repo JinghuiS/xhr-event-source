@@ -60,6 +60,7 @@
     "event-source"
   ],
   "devDependencies": {
+    "@release-it/conventional-changelog": "^10.0.0",
     "@rslib/core": "^0.3.2",
     "@types/node": "^22.8.1",
     "prettier": "^3.4.1",
